@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>To jest strona</h1>
+    <h2>używa języka js</h2>
+    <h3 id="tekst">Tekst</h3>
+    <p id="dotlumaczenia">To jest tekst do tłumaczenia</p>
+    <button id="btnTlumacz">Tłumacz tekst</button>
+
+    <script>
+        alert("zaakceptuj:(to komunikat js)");                                         //komunikat pojawi się na stronie z txtem 'zaakceptuj:(to komunikat js)'//
+        document.getElementById("tekst").addEventListener('click', function() {
+            document.getElementById("tekst").textContent = "Inny tekst";
+        });                           //js wyszuka elementu z identyfikatorem tekst czyli h3 w tym przypadku i gdy kliknie się Tekst to zamieni się na inny tekst//
+        document.getElementById("btnTlumacz").addEventListener('click', function() {
+            alert("uwaga będzie tłumaczenie");
+            document.getElementById("dotlumaczenia").textContent = "This is text to translate";
+        });                                              //po kliknieciu guzika paragraf (dotlumaczenia) zostanie przetłumaczone//
+    </script>
+</body>
+</html>
